@@ -28,7 +28,7 @@ def findDecimal(n):
     return final
 
 
-number1, number2 = input("teste").split()
+number1, number2 = input("Type two numbers separated by space.").split()
 number1Str = []
 number2Str = []
 findBinary(number1, number1Str)
@@ -36,12 +36,12 @@ findBinary(number2, number2Str)
 number1Str = ''.join(number1Str)
 number2Str = ''.join(number2Str)
 result = []
-for c in range(32):
+for c in range(32):  # Getting the result binary number ignoring the carry outs;
     if number1Str[c] == number2Str[c]:
         result.append('0')
     elif number1Str[c] == '1' and number2Str[c] == '0':
         result.append('1')
     elif number1Str[c] == '0' and number2Str[c] == '1':
         result.append('1')
-result = ''.join(result)
+result = ''.join(result) # Transforming the list on a string;
 print(findDecimal(result))
