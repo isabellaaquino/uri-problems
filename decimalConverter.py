@@ -1,3 +1,4 @@
+# Enter a binary number (composed by 1's and 0's only) and it'll return the decimal form of it.
 def findDecimal(n):
     n = str(n)
     n = reversed(n)
